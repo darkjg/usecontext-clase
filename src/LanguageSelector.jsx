@@ -1,13 +1,18 @@
 import { useLanguage } from "./LanguageContext";
 
 
-const handleChangeLanguage = (e) => {
-    setLanguage(e.target.value)
-}
 
 
 const LanguajeSelector = () => {
-    const { language, setLanguage } = useLanguage();
+    const { language, changeLanguage } = useLanguage();
+
+    const handleChangeLanguage = (e) => {
+        changeLanguage(e.target.value)
+    }
+    
+
+
+
     return (
         <>
             <label>Select language:</label>
